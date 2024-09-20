@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/0kBhrgyXPpI
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/ui/button"
 
 export default function Home() {
   return (
