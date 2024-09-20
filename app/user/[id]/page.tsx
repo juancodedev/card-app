@@ -7,6 +7,7 @@
 import { Button } from "@/app/components/ui/button"
 import Image from 'next/image'
 import { fetchDataCards } from '@/app/lib/data'
+import { JSX, SVGProps } from "react"
 
 
 export default async function PageUserId({
@@ -73,7 +74,7 @@ export default async function PageUserId({
     )
 }
 
-function GlobeIcon(props) {
+function GlobeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
@@ -95,7 +96,7 @@ function GlobeIcon(props) {
 }
 
 
-function InstagramIcon(props) {
+function InstagramIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
@@ -117,7 +118,7 @@ function InstagramIcon(props) {
 }
 
 
-function MailIcon(props) {
+function MailIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
@@ -138,7 +139,7 @@ function MailIcon(props) {
 }
 
 
-function PhoneIcon(props) {
+function PhoneIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
