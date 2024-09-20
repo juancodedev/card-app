@@ -1,7 +1,7 @@
 -- CreateTable
-CREATE TABLE "Card" (
+CREATE TABLE "card" (
     "id" TEXT NOT NULL,
-    "webSite" TEXT NOT NULL,
+    "website" TEXT NOT NULL,
     "instagram" TEXT NOT NULL,
     "twitter" TEXT NOT NULL,
     "github" TEXT NOT NULL,
@@ -15,10 +15,10 @@ CREATE TABLE "Card" (
     "titulo" TEXT NOT NULL,
     "descripcion" TEXT NOT NULL,
     "img" TEXT NOT NULL,
-    "imgPortada" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
-    "deletedAt" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
+    "imgportada" TEXT NOT NULL,
+    "createdat" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedat" TIMESTAMP(3) NOT NULL,
+    "deletedat" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT "Card_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "card_pkey" PRIMARY KEY ("id")
 );
