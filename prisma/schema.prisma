@@ -13,9 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Card {
+model card {
   id          String   @id @default(uuid())
-  webSite     String
+  website     String
   instagram   String
   twitter     String
   github      String
@@ -29,8 +29,8 @@ model Card {
   titulo      String
   descripcion String
   img         String
-  imgPortada  String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  deletedAt   DateTime? @default(now())
+  imgportada  String
+  createdat   DateTime @default(now())
+  updatedat   DateTime @updatedAt
+  deletedat   DateTime? @default(now())
 }
