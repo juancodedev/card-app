@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,7 +8,7 @@ datasource db {
 }
 
 model card {
-  id          String   @id @default(uuid())
+  id          String    @id(map: "Card_pkey") @default(uuid())
   website     String
   instagram   String
   twitter     String
@@ -30,7 +24,47 @@ model card {
   descripcion String
   img         String
   imgportada  String
-  createdat   DateTime @default(now())
-  updatedat   DateTime @updatedAt
+  createdat   DateTime  @default(now())
+  updatedat   DateTime  @updatedAt
   deletedat   DateTime? @default(now())
+}
+
+model contacts {
+  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  first_name    String    @db.VarChar(255)
+  last_name     String    @db.VarChar(255)
+  email_address String    @unique
+  phone_number  String    @db.VarChar(20)
+  services      String
+  message       String    @db.VarChar(255)
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  update_at     DateTime? @default(now()) @db.Timestamptz(6)
+  sended_at     DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model customers {
+  id        String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name      String @db.VarChar(255)
+  email     String @db.VarChar(255)
+  image_url String @db.VarChar(255)
+}
+
+model invoices {
+  id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  customer_id String   @db.Uuid
+  amount      Int
+  status      String   @db.VarChar(255)
+  date        DateTime @db.Date
+}
+
+model revenue {
+  month   String @unique @db.VarChar(4)
+  revenue Int
+}
+
+model users {
+  id       String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name     String @db.VarChar(255)
+  email    String @unique
+  password String
 }

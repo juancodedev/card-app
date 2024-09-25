@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function POST(request: Request) {
     try {
         const {
-            webSite,
+            website,
             instagram,
             twitter,
             github,
@@ -20,12 +20,12 @@ export async function POST(request: Request) {
             titulo,
             descripcion,
             img,
-            imgPortada
+            imgportada
         } = await request.json();
 
         const newCard = await prisma.card.create({
             data: {
-                webSite,
+                website,
                 instagram,
                 twitter,
                 github,
@@ -39,9 +39,10 @@ export async function POST(request: Request) {
                 titulo,
                 descripcion,
                 img,
-                imgPortada,
+                imgportada,
             },
         });
+
 
         return NextResponse.json(newCard);
     } catch (error) {

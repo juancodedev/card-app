@@ -1,6 +1,6 @@
 const cardData = [
     {
-        webSite: "www.juancode.dev",
+        website: "www.juancode.dev",
         instagram: "juanshocl",
         twitter: "juancodedev",
         github: "juancodedev",
@@ -20,7 +20,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.marianadev.dev",
+        website: "www.marianadev.dev",
         instagram: "marianatech",
         twitter: "marianadev",
         github: "marianadev",
@@ -40,7 +40,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.pablodev.dev",
+        website: "www.pablodev.dev",
         instagram: "pablo.code",
         twitter: "pablodev",
         github: "pablodev",
@@ -60,7 +60,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.carlacodes.dev",
+        website: "www.carlacodes.dev",
         instagram: "carla.codes",
         twitter: "carlacodes",
         github: "carlacodes",
@@ -80,7 +80,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.alejandrodev.dev",
+        website: "www.alejandrodev.dev",
         instagram: "alejandro_dev",
         twitter: "alejandrodev",
         github: "alejandrodev",
@@ -100,7 +100,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.fernandocodes.dev",
+        website: "www.fernandocodes.dev",
         instagram: "fernando.codes",
         twitter: "fernandocodes",
         github: "fernandocodes",
@@ -120,7 +120,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.sophiadev.dev",
+        website: "www.sophiadev.dev",
         instagram: "sophia.codes",
         twitter: "sophiadev",
         github: "sophiadev",
@@ -140,7 +140,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.luiscodes.dev",
+        website: "www.luiscodes.dev",
         instagram: "luis.codes",
         twitter: "luiscodes",
         github: "luiscodes",
@@ -160,7 +160,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.anafrontend.dev",
+        website: "www.anafrontend.dev",
         instagram: "ana.frontend",
         twitter: "anafrontend",
         github: "anafrontend",
@@ -180,7 +180,7 @@ const cardData = [
         deleted_at: ""
     },
     {
-        webSite: "www.diego.codes.dev",
+        website: "www.diego.codes.dev",
         instagram: "diego.codes",
         twitter: "diegocodes",
         github: "diegocodes",
