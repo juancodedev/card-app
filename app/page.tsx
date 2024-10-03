@@ -281,7 +281,7 @@ export default function Home() {
                       ))}
                     </div>
                     <p className="text-secondary dark:text-secondary-dark text-center">
-                      "Excelente aplicacion, ha mejorado significativamente mi productividad."
+                    &quot;Excelente aplicacion, ha mejorado significativamente mi productividad.	&quot;
                     </p>
                   </div>
                 ))}

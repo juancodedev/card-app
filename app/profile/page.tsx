@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Switch } from "@/components/ui/switch"
+import Image from 'next/image'
+
 
 export default function Component() {
     const [socialInputs, setSocialInputs] = useState([
@@ -73,7 +75,16 @@ export default function Component() {
                     <div className="w-full lg:w-1/3 flex justify-center items-start">
                         <div className="relative">
                             <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-gray-200 overflow-hidden">
-                                <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                                <Image
+                                    src="/paceholder.svg"
+                                    width={200}
+                                    height={200}
+                                    alt="Profile"
+                                    style={{ aspectRatio: "200/200", objectFit: "cover" }}
+                                    className="w-40 h-40 rounded-full"
+
+                                />
+                                {/* <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" /> */}
                             </div>
                             <Button variant="secondary" size="icon" className="absolute bottom-0 right-0 rounded-full h-8 w-8 sm:h-10 sm:w-10">
                                 <Camera className="h-4 w-4 sm:h-5 sm:w-5" />
