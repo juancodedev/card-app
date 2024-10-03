@@ -1,6 +1,11 @@
 import { sql } from '@vercel/postgres';
+
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+
+
 export async function fetchDataCards(id: string) {
-    console.log('desde la query',id)
+    console.log('Busco el ID:',id)
     try {
         const data = await sql`select
         card.nombre,
@@ -19,4 +24,6 @@ export async function fetchDataCards(id: string) {
         console.error('Database Error:', error);
         throw new Error('Failed to fetch');
     }
+    revalidatePath("/dashboard/invoices");
+    redirect("/dashboard/invoices");
 }

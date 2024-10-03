@@ -5,7 +5,7 @@ const cardData = [
         twitter: "juancodedev",
         github: "juancodedev",
         email: "cl.jmunoz@gmail.com",
-        telefono: "+56998307778",
+        telefono: "+569983077786",
         whatsapp: "+56998307778",
         linkedin: "juancodedev",
         facebook: "juancodedev",

@@ -4,11 +4,11 @@
  * @see https://v0.dev/t/0kBhrgyXPpI
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+// import { useState, useEffect } from 'react'
 import { Button } from "@/app/components/ui/button"
 import Image from 'next/image'
 import { fetchDataCards } from '@/app/lib/data'
-import { JSX, SVGProps } from "react"
-
+import { JSX, SVGProps } from 'react'
 
 export default async function PageUserId({
     params,
@@ -18,6 +18,7 @@ export default async function PageUserId({
     const { id } = params
     const dataCard = await fetchDataCards(id)
     const data = dataCard[0]
+    console.log(data)
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
@@ -38,7 +39,7 @@ export default async function PageUserId({
                 <div className="space-y-3">
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg text-slate-500 hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <GlobeIcon className="w-6 h-6 text-blue-500" />
-                        <a href={data.website} target="blank" className="text-gray-800">
+                        <a href={`http://${data.website}`} target="blank" className="text-gray-800">
                             {data.website}
                         </a>
                     </div>
