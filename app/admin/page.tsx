@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Bell, ChevronDown, Menu, Search, User, UserPlus, Users, Edit, Trash2 } from "lucide-react"
+import { Bell, ChevronDown, Search, User, UserPlus, Users, Edit, Trash2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -84,16 +84,13 @@ export default function Component() {
                             <DropdownMenu>
                                 <DropdownMenuTrigger asChild>
                                     <Button variant="ghost" size="icon">
-                                        <img
+                                        <Image
+                                            src="/paceholder.svg"
+                                            width={32}
+                                            height={32}
                                             alt="Avatar"
+                                            style={{ aspectRatio: "32/32", objectFit: "cover" }}
                                             className="rounded-full"
-                                            height="32"
-                                            src="/placeholder.svg"
-                                            style={{
-                                                aspectRatio: "32/32",
-                                                objectFit: "cover",
-                                            }}
-                                            width="32"
                                         />
                                         <ChevronDown className="ml-2 h-4 w-4" />
                                         <span className="sr-only">Toggle user menu</span>
@@ -159,15 +156,15 @@ export default function Component() {
                                     <CardContent>
                                         <div className="flex flex-col items-center">
 
-                                                                            <Image
-                                    src="/paceholder.svg"
-                                    width={128}
-                                    height={128}
-                                    alt={`Avatar de ${selectedUser.name}`}
-                                    style={{ aspectRatio: "128/128", objectFit: "cover" }}
-                                    className="mb-4 rounded-full"
+                                            <Image
+                                                src="/paceholder.svg"
+                                                width={128}
+                                                height={128}
+                                                alt={`Avatar de ${selectedUser.name}`}
+                                                style={{ aspectRatio: "128/128", objectFit: "cover" }}
+                                                className="mb-4 rounded-full"
 
-                                />
+                                            />
                                             <h3 className="text-lg font-semibold">{selectedUser.name}</h3>
                                             <p className="text-sm text-gray-500">{selectedUser.email}</p>
                                             <p className="mt-2 text-sm font-medium">{selectedUser.role}</p>
