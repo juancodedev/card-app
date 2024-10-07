@@ -24,9 +24,15 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
 
+type User = {
+    id: number
+    name: string
+    email: string
+    role: string
+}
 
 // Simulated user data
-const users = [
+const users: User[] = [
     { id: 1, name: "Alice Johnson", email: "alice@example.com", role: "Admin" },
     { id: 2, name: "Bob Smith", email: "bob@example.com", role: "User" },
     { id: 3, name: "Charlie Brown", email: "charlie@example.com", role: "User" },
@@ -36,7 +42,7 @@ const users = [
 
 export default function Component() {
     const [selectedItem, setSelectedItem] = useState("Listar Usuarios")
-    const [selectedUser, setSelectedUser] = useState(null)
+    const [selectedUser, setSelectedUser] = useState<User | null>(null)
 
     const menuItems = [
         { name: "Dashboard", icon: <User className="h-4 w-4" /> },
