@@ -185,7 +185,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nombre del Sitio - Descripción breve del sitio</title>
+        <title>NexCard - Descripción breve del sitio</title>
         <meta name="description" content="Descripción detallada del sitio web para mejorar el SEO." />
         <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3" />
         <meta name="author" content="Nombre de la empresa o autor" />
@@ -194,13 +194,13 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.tusitio.com/" />
-        <meta property="og:title" content="Nombre del Sitio - Descripción breve del sitio" />
+        <meta property="og:title" content="NexCard - Descripción breve del sitio" />
         <meta property="og:description" content="Descripción detallada del sitio web para mejorar el SEO." />
         <meta property="og:image" content="https://www.tusitio.com/og-image.jpg" />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.tusitio.com/" />
-        <meta property="twitter:title" content="Nombre del Sitio - Descripción breve del sitio" />
+        <meta property="twitter:title" content="NexCard - Descripción breve del sitio" />
         <meta property="twitter:description" content="Descripción detallada del sitio web para mejorar el SEO." />
         <meta property="twitter:image" content="https://www.tusitio.com/twitter-image.jpg" />
       </Head>
@@ -208,7 +208,7 @@ export default function Home() {
         {/* Header */}
         <header className="bg-white dark:bg-gray-800 shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-primary dark:text-primary-dark uppercase font-bold text-xl">Nombre del Sitio</h1>
+            <h1 className="text-primary dark:text-primary-dark uppercase font-bold text-xl">NexCard</h1>
             <div className="flex items-center space-x-4">
               <button onClick={toggleLanguage} className="text-primary dark:text-primary-dark">
                 <Globe className="h-6 w-6" />

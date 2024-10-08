@@ -78,7 +78,7 @@ export default async function PageUserId({
                 <div className="mt-6">
                     <div className="flex justify-center space-x-4">
                         <DownloadVCardButton contact={contact} />
-                        <button className="bg-green-600 text-white px-4 py-2 rounded">Almacenar en la Nube</button>
+                        <button className="bg-green-600 text-white px-4 py-2 rounded line-through disabled:opacity-100">Almacenar en la Nube</button>
                     </div>
 
                 </div>
