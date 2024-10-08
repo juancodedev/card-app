@@ -61,7 +61,7 @@ export default async function PageUserId({
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <PhoneIcon className="w-6 h-6 text-green-500" />
                         <a href={`http://wa.me/${data.whatsapp}`} target="blank" className="text-gray-800">
-                            {data.whatsapp}
+                            +{data.whatsapp}
                         </a>
                     </div>
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
