@@ -5,10 +5,10 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 // import { useState, useEffect } from 'react'
-import { Button } from "@/app/components/ui/button"
 import Image from 'next/image'
 import { fetchDataCards } from '@/app/lib/data'
 import { JSX, SVGProps } from 'react'
+import DownloadVCardButton from '../../components/DownloadVCardButton'
 
 export default async function PageUserId({
     params,
@@ -18,7 +18,15 @@ export default async function PageUserId({
     const { id } = params
     const dataCard = await fetchDataCards(id)
     const data = dataCard[0]
-    console.log(data)
+
+    const contact = {
+        fullName: `${data.nombre} ${data.apellido}`,
+        organization: "Lawen Tech Solutions",
+        title: `${data.titulo}`,
+        email: `${data.email}`,
+        phoneNumber: `${data.telefono}`,
+        website: `http://${data.website}`
+    }
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
@@ -45,8 +53,8 @@ export default async function PageUserId({
                     </div>
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <InstagramIcon className="w-6 h-6 text-pink-500" />
-                        <a href= {`http://www.instagram.com/${data.instagram}`} target="blank" className="text-gray-800">
-                        
+                        <a href={`http://www.instagram.com/${data.instagram}`} target="blank" className="text-gray-800">
+
                             @{data.instagram}
                         </a>
                     </div>
@@ -58,17 +66,21 @@ export default async function PageUserId({
                     </div>
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <MailIcon className="w-6 h-6 text-red-500" />
-                        <a href=  {`mailto:${data.email}`} className="text-gray-800">
+                        <a href={`mailto:${data.email}`} className="text-gray-800">
                             {data.email}
                         </a>
                     </div>
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <PhoneIcon className="w-6 h-6 text-blue-500" />
-                        <a href=  {`tel:${data.telefono}`} className="text-gray-800"> +{data.telefono} </a>
+                        <a href={`tel:${data.telefono}`} className="text-gray-800"> +{data.telefono} </a>
                     </div>
                 </div>
                 <div className="mt-6">
-                    <Button className="w-full bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700">Guardar Contacto</Button>
+                    <div className="flex justify-center space-x-4">
+                        <DownloadVCardButton contact={contact} />
+                        <button className="bg-green-600 text-white px-4 py-2 rounded">Almacenar en la Nube</button>
+                    </div>
+
                 </div>
             </div>
         </div>
