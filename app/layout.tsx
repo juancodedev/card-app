@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 // This is the root layout component for your Next.js app.
 // Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from 'next/font/google'
 import { cn } from '@/app/lib/utils'
 import './globals.css'
@@ -47,6 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics/>
       <body 
         className={cn(
           'antialiased',

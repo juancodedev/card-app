@@ -24,7 +24,7 @@ export default async function PageUserId({
         organization: "Lawen Tech Solutions",
         title: `${data.titulo}`,
         email: `${data.email}`,
-        phoneNumber: `${data.telefono}`,
+        phoneNumber: `+${data.telefono}`,
         website: `http://${data.website}`
     }
     return (
