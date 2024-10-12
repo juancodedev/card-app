@@ -72,13 +72,13 @@ export default async function PageUserId({
                     </div>
                     <div className="flex items-center space-x-3 bg-gray-100 p-3 rounded-lg  hover:bg-slate-100 active:bg-slate-400 focus:outliine-none focus:ring focus:ring-slate-300">
                         <PhoneIcon className="w-6 h-6 text-blue-500" />
-                        <a href={`tel:${data.telefono}`} className="text-gray-800"> +{data.telefono} </a>
+                        <a href={`tel:+${data.telefono}`} className="text-gray-800"> +{data.telefono} </a>
                     </div>
                 </div>
                 <div className="mt-6">
                     <div className="flex justify-center space-x-4">
                         <DownloadVCardButton contact={contact} />
-                        <button className="bg-green-600 text-white px-4 py-2 rounded line-through disabled:opacity-100">Almacenar en la Nube</button>
+                        <button className="bg-green-600 text-white px-4 py-2 rounded line-through disabled:opacity-100">Quiero la mia!!</button>
                     </div>
 
                 </div>
