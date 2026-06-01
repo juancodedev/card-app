@@ -26,13 +26,13 @@ export default function LoginPage() {
             </svg>
           </div>
         </div>
-        <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-4 text-gray-600">Login</h2>
         <form className="space-y-4">
           <div>
-            <Input placeholder="Username" type="text" />
+            <Input placeholder="Username" type="text" className="text-sm text-gray-600"/>
           </div>
           <div>
-            <Input placeholder="Password" type="password" />
+            <Input placeholder="Password" type="password" className="text-sm text-gray-600"/>
           </div>
           <div className="flex items-center space-x-2">
             <Checkbox id="remember" />

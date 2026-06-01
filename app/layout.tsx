@@ -22,21 +22,19 @@ export const metadata: Metadata = {
 //   );
 // }
 
-// This is the root layout component for your Next.js app.
-// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
 import { Analytics } from "@vercel/analytics/react"
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import { cn } from '@/app/lib/utils'
 import './globals.css'
 
-const fontHeading = Inter({
-  subsets: ['latin'],
+const fontHeading = localFont({
+  src: './fonts/GeistVF.woff',
   display: 'swap',
   variable: '--font-heading',
 })
 
-const fontBody = Inter({
-  subsets: ['latin'],
+const fontBody = localFont({
+  src: './fonts/GeistMonoVF.woff',
   display: 'swap',
   variable: '--font-body',
 })
